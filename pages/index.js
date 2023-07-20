@@ -2,9 +2,17 @@ import Head from "next/head";
 // import Image from 'next/image'
 // import { Inter } from 'next/font/google'
 import styles from "@/styles/Home.module.css";
+import { useEffect, useState } from "react";
 // const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
   const { main_home } = styles;
+  const [data, setData] = useState()
+  useEffect(() => {
+    fetch("/api/getAllProducts", { method: "GET" })
+      .then(response => response.json())
+      .then(data => setData(data))
+      .catch(error => console.log(error))
+  }, [])
   return (
     <>
       <Head>
@@ -14,6 +22,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={main_home}>
+      <h1>{!data ? `Loading ...` : data.map(item => <h1>{item.name}</h1>)}</h1>
       
       </div>
     </>
