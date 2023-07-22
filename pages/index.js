@@ -1,6 +1,5 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
-import { useEffect, useState } from "react";
 import Link from "next/link";
 export default function Home({ data }) {
   const { main_home, main_heading, price_p, loader } = styles;
