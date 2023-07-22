@@ -31,7 +31,7 @@ export default function Home() {
             <p>{item.description}</p>
             <p className={price_p}> Rs.<b>{item.price}</b></p>
           </Link>
-        )}
+        )} 
 
       </div>
     </>
