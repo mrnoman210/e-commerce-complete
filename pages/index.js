@@ -3,7 +3,7 @@ import styles from "@/styles/Home.module.css";
 import Link from "next/link";
 import React from 'react'
 
-const index = ({ data }) =>  {
+const home = ({ data }) =>  {
   const { main_home, main_heading, price_p, loader } = styles;
   // const [data, setData] = useState()
   // useEffect(() => {
@@ -35,7 +35,7 @@ const index = ({ data }) =>  {
     </>
   );
 }
-export default index
+export default home
 export async function getStaticProps() {
   // Fetch data from the API
   const apiURL = "http://localhost:3000/api/getAllProducts";
