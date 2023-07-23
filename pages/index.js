@@ -1,7 +1,9 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import Link from "next/link";
-export default function Home({ data }) {
+import React from 'react'
+
+const index = ({ data }) =>  {
   const { main_home, main_heading, price_p, loader } = styles;
   // const [data, setData] = useState()
   // useEffect(() => {
@@ -33,7 +35,7 @@ export default function Home({ data }) {
     </>
   );
 }
-
+export default index
 export async function getStaticProps() {
   // Fetch data from the API
   const apiURL = "http://localhost:3000/api/getAllProducts";
