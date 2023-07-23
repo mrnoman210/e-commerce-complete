@@ -1,20 +1,14 @@
 [
   {
     "id": 1,
-    "name": "Mobile",
-    "price": 250000,
-    "description": "Samsung mobile it is amazing mobile with best camera"
-  }
-  ,{
+    "productname": "Geoffrey Nolan",
+    "price": "297",
+    "description": "Et eius quis aliquid"
+  },
+  {
     "id": 2,
-    "name": "TV",
-    "price": 45000,
-    "description": "dummy description for TV"
-  }
-  ,{
-    "id": 3,
-    "name": "Pencil",
-    "price": 10,
-    "description": "This is very amazing pencil for writing"
+    "productname": "Oprah Sawyer",
+    "price": "606",
+    "description": "Quod dolor aute amet"
   }
 ]

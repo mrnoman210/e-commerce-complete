@@ -23,7 +23,7 @@ export default function Home({ data }) {
 
         {!data ? <div className={loader}></div> : data.map((item, i) =>
           <Link href={`/product/${item.id}`} key={i}>
-            <h1 className={main_heading}>{item.name}</h1>
+            <h1 className={main_heading}>{item.productname}</h1>
             <p>{item.description}</p>
             <p className={price_p}> Rs.<b>{item.price}</b></p>
           </Link>
