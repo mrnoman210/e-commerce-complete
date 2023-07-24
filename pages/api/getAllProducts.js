@@ -1,5 +1,5 @@
-import { saveProduct } from "@/handlerFunctions/getProductsPath";
-import { readProductFile } from "@/handlerFunctions/readFile";
+import { saveProduct } from "@/handlerFunctions/writeProductFile";
+import { readProductFile } from "@/handlerFunctions/readProductFile";
 
 
 export default async function ProductsData(req, res) {

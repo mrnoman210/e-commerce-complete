@@ -6,16 +6,19 @@
 }
 nav {
   width: 100%;
-  background-color: orange;
+  background-color: black ;
   padding: 8px 0px;
   overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 nav ul {
   display: flex;
   justify-content: space-evenly;
 }
-nav li a:hover{
-  background-color: rgb(251, 186, 66);
+nav li a:hover {
+  background-color: rgb(60, 50, 50);
 }
 nav li a {
   padding: 12px;

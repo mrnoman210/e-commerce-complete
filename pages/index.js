@@ -5,13 +5,6 @@ import React from 'react'
 
 const home = ({ data }) =>  {
   const { main_home, main_heading, price_p, loader } = styles;
-  // const [data, setData] = useState()
-  // useEffect(() => {
-  //   fetch("/api/getAllProducts", { method: "GET" })
-  //     .then(response => response.json())
-  //     .then(data => setData(data))
-  //     .catch(error => console.log(error))
-  // }, [])
   return (
     <>
       <Head>
@@ -20,9 +13,7 @@ const home = ({ data }) =>  {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <div className={main_home}>
-
         {!data ? <div className={loader}></div> : data.map((item, i) =>
           <Link href={`/product/${item.id}`} key={i}>
             <h1 className={main_heading}>{item.productname}</h1>

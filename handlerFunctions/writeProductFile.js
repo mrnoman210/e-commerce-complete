@@ -1,4 +1,4 @@
-import { readProductFile } from "./readFile";
+import { readProductFile } from "./readProductFile";
 import fs from "node:fs"
 import path from "path";
 const filePath = path.join(process.cwd(), "data", "products.json");
