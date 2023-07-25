@@ -2,7 +2,9 @@ import Head from "next/head";
 import React, { useEffect, useState } from "react";
 import styles from "@/styles/form.module.css";
 import Link from "next/link";
+import { useRouter } from "next/router";
 const signup = () => {
+  const router = useRouter()
   const {
     mainFormSection,
     center_row,
@@ -23,7 +25,7 @@ const signup = () => {
   };
   // =========================== handle submit ==============================
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
     if (confirmPassword != userData.userPassword) setErroBox(true);
     else {
       const response = await fetch("/api/createUsers", {
@@ -34,11 +36,14 @@ const signup = () => {
         body: JSON.stringify(userData),
       })
       if (response.ok) {
-        const data = await  response.json() 
+        const data = await response.json()
+
         console.log(data.token);
+        localStorage.setItem("token", data.token)
+        router.push("/")
         alert("User created")
       }
-      else{alert("error")}
+      else { alert("error") }
       setErroBox(false);
     }
   };
